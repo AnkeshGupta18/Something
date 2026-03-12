@@ -1,0 +1,147 @@
+/*  responsive webpage layout for an application using html and css or  figma */
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Parallax Website</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Parallax Sections */
+
+.parallax-1,
+.parallax-2,
+.parallax-3{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.parallax-1{
+    background-image:url('img1.jpg');
+}
+
+.parallax-2{
+    background-image:url('img2.jpg');
+}
+
+.parallax-3{
+    background-image:url('img3.jpg');
+}
+
+.parallax-inner{
+    padding:40px;
+    background:rgba(0,0,0,0.6);
+    width:100%;
+    text-align:center;
+    color:white;
+}
+
+/* Content Section */
+
+.content{
+    background:lightblue;
+    padding:50px;
+    text-align:center;
+}
+
+h2{
+    color:darkblue;
+}
+
+p{
+    color:black;
+    font-size:18px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:768px){
+
+.parallax-inner{
+    padding:20px;
+}
+
+h1{
+    font-size:28px;
+}
+
+h2{
+    font-size:22px;
+}
+
+p{
+    font-size:16px;
+}
+
+.content{
+    padding:30px;
+}
+
+/* Disable parallax effect on mobile */
+
+.parallax-1,
+.parallax-2,
+.parallax-3{
+    background-attachment:scroll;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="parallax-1">
+<div class="parallax-inner">
+<h1>Parallax Website</h1>
+</div>
+</section>
+
+<section class="content">
+<h2>Section One</h2>
+<p>
+This section explains how parallax scrolling works. The background image stays fixed while the content moves.
+</p>
+<p>
+This design keeps the layout simple while adding depth and a modern feel.
+</p>
+</section>
+
+<section class="parallax-2">
+<div class="parallax-inner">
+<h1>Explore Nature</h1>
+</div>
+</section>
+
+<section class="content">
+<h2>Section Two</h2>
+<p>
+Parallax effects improve user experience by adding motion and structure between sections.
+</p>
+<p>
+When combined with clean typography and subtle colors, the website looks elegant and professional.
+</p>
+</section>
+
+<section class="parallax-3">
+<div class="parallax-inner">
+<h1>Thank You</h1>
+</div>
+</section>
+
+</body>
+</html>
